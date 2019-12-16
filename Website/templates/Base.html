@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <title>Flask App</title>
+
+    <!-- Boot Strap css Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Bootstraps Java Scipts Links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- JQuery links  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Links for Footer -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Style sheets css files  -->
+    <link rel="stylesheet" href="/static/Main/css/Main.css">
+
+    <!-- charlist -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <!--High CHART LIVE  -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+<body>
+
+<nav id="nav1" class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">Home</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <!-- Change the Url For Routes     -->
+            <li class="nav-item active">
+                <!--Make sure to change HREF when you add new Pages  -->
+                <a class="nav-link" href="/" > Home <span class="sr-only">(current)</span></a>
+            </li>
+
+
+            <!-- Change the Url For Routes     -->
+            <li class="nav-item active">
+                <!--Make sure to change HREF when you add new Pages  -->
+                <a class="nav-link" href="https://huntjobbot.herokuapp.com/" > Job Hunter <span class="sr-only">(current)</span></a>
+            </li>
+
+
+
+            <!-- Change the Url For Routes     -->
+            <li class="nav-item active">
+                <!--Make sure to change HREF when you add new Pages  -->
+                <a class="nav-link" href="https://gitrepohunter.herokuapp.com" > Github Hunter <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+    </div>
+
+</nav>
+
+<!-- Template Inheritance  -->
+{% block content %}
+
+{% endblock %}
+
+<footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+
+                <div class="pr-xl-4">
+                    <a class="brand" href="index.html">
+                        <img class="brand-logo-light" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x">
+                    </a>
+                    <p>
+
+                        Hello! I’m Soumil Nitin Shah, a Software and Hardware Developer based in New York City. I have completed by Bachelor in Electronic Engineering and my Double master’s in Computer and Electrical Engineering. I Develop Python Based Cross Platform Desktop Application , Webpages , Software, REST API, Database and much more I have more than 2 Years of Experience in Python
+                    </p>
+
+                    <!-- Rights-->
+                    <p class="rights">
+                        <span>©  </span>
+                        <span class="copyright-year">2018</span>
+                        <span> </span>
+                        <span>Waves</span>
+                        <span>. </span><span>All Rights Reserved.</span>
+                    </p>
+
+                </div>
+            </div>
+
+            <br>
+            <div class="col-md-4">
+                <br>
+                <h5>Contacts</h5>
+
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>80 University Ave Bridgeport, CT 06604</dd>
+                </dl>
+
+                <!-- Email -->
+                <dl class="contact-list">
+                    <dt>email:</dt>
+                    <dd>
+                        <a href="mailto:#">shahsoumil519@gmail.com</a>
+                    </dd>
+                </dl>
+
+            </div>
+
+            <br>
+            <div class="col-md-4 col-xl-3">
+                <br>
+                <h5>Links</h5>
+
+                <ul class="nav-list">
+
+                    <li><a href="https://soumilshah.herokuapp.com">About</a></li>
+                    <li><a href="https://soumilshah.herokuapp.com/project">Projects</a></li>
+                    <li><a href="https://soumilshah1995.blogspot.com">Blog</a></li>
+                    <li><a href="https://www.linkedin.com/in/shah-soumil/">Linkedin </a></li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters social-container">
+
+        <div class="col">
+            <a class="social-inner" href="https://www.facebook.com/soumilshah1995/">
+                <span class="icon mdi mdi-facebook"></span>
+                <span>Facebook</span>
+            </a>
+        </div>
+
+        <div class="col">
+            <a class="social-inner" href="https://soumilshah.herokuapp.com">
+                <span class="icon mdi mdi-instagram"></span>
+                <span>Github </span>
+            </a>
+        </div>
+
+        <div class="col">
+            <a class="social-inner" href="https://www.youtube.com/channel/UC_eOodxvwS_H7x2uLQa-svw?view_as=subscriber">
+                <span class="icon mdi mdi-twitter"></span>
+                <span>Youtube </span>
+            </a>
+        </div>
+
+        <div class="col">
+            <a class="social-inner" href="https://gitrepohunter.herokuapp.com">
+                <span class="icon mdi mdi-youtube-play">
+
+                </span><span>Github Hunter</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/Main/css/Main.css">
+
+<!-- Cover Image  -->
+<div class="jumbotron">
+    <h1 id="title">Welcome to Job Hunter</h1>
+</div>
+
+<div class="container-fluid">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="container-fluid" id="data-container"></div>
+        </div>
+</div>
+
+<!-- <div class="ct-chart ct-perfect-fourth"></div> -->
+<script>
+        var chart;
+
+        function requestData()
+        {
+            // Ajax call to get the Data from Flask
+            var requests = $.get('/Humidity/humidity');
+
+            // request is complete
+            var tm = requests.done(function (result)
+            {
+
+                console.log("TEMPERATURE", result.temperature);
+                var series = chart.series[0],
+                    shift = series.data.length > 20;
+
+                // add the point
+                chart.series[0].addPoint(result, true, shift);
+
+                // call it again after one second
+                setTimeout(requestData, 2000);
+
+            });
+        }
+
+        $(document).ready(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'data-container',
+                    defaultSeriesType: 'spline',
+                    events: {
+                        load: requestData
+                    }
+                },
+                title: {
+                    text: 'Live random data'
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickPixelInterval: 150,
+                    maxZoom: 20 * 1000
+                },
+                yAxis: {
+                    minPadding: 0.2,
+                    maxPadding: 0.2,
+                    title: {
+                        text: 'Value',
+                        margin: 80
+                    }
+                },
+                series: [{
+                    name: 'Random data',
+                    data: []
+                }]
+            });
+        });
+
+</script>
+<script src="/static/Main/js/Main.js"></script>
+
+{% endblock %}
